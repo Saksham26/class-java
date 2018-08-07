@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+public class freqchar
+{
+    int[] a=new int[9999];
+    void cal(String b)
+    {
+        for(int i=0;i<b.length();i++)
+        {
+        char ch=b.charAt(i);    
+        a[ch]++;
+        }
+        for(int i=97;i<=122;i++)
+        {
+        if(a[i]>=1)
+        {
+	System.out.print((char)i+" ");
+        System.out.println(a[i]);
+        }
+        }
+
+    }
+    
+    
+    public static void main(String[] args)
+     throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String b=br.readLine();
+        freqchar a=new freqchar();
+        a.cal(b);
+        
+        
+    }
+}
